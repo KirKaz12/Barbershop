@@ -35,7 +35,7 @@ var gulp         = require('gulp'),
 //=========== Tasks
 // Jade
 gulp.task('jade', function() {
-    return gulp.src('app/*.jade')
+    return gulp.src('app/jade/index.jade')
         .pipe(jade({pretty: true})) 
         .pipe(gulp.dest('app')) 
 });
@@ -104,7 +104,7 @@ gulp.task('browser-sync', function() {
 //Набюлдаем за изменениями файлов
 gulp.task('watch', ['browser-sync', 'imgmin', 'htmlminify', 'jsminify', 'jade', 'less'], function() {
     gulp.watch('app/**/*.less', ['less']);
-    gulp.watch('./app/*.jade', ['jade-watch']);
+    gulp.watch('./app/**/*.jade', ['jade-watch']);
     gulp.watch('app/*.html').on('change', browserSync.reload);
     gulp.watch('app/*.php').on('change', browserSync.reload); 
     gulp.watch('app/js/**/*.js').on('change', browserSync.reload); 
