@@ -176,6 +176,16 @@
 		}
 		&__toggle {
 			display: none;
+			position: static;
+		}
+		&_opened,
+		&_closed {
+			.top-nav__toggle {
+				position: static;
+				display: none;
+				height: 0;
+				width: 0;
+			}
 		}
 		&__list {
 			flex-grow: 1;

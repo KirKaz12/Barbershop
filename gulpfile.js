@@ -63,21 +63,29 @@ gulp.task('less', function() {
 });
 
 // CSS соединение и сжатие
-/*gulp.task('cssconcat', function() {
-    return gulp.src([
-        'app/css/normalize.css',
-        'app/css/style.css' 
-        ])
-        .pipe(concat('main.min.css')) 
+gulp.task('cssconcat', function() {
+    return gulp.src('app/css/style.css')
+        .pipe(rename('main.min.css')) 
         .pipe(cssnano()) 
         .pipe(gulp.dest('dist/css')); 
-});*/
+});
 
 // JS минификация
 gulp.task('jsminify', function() {
     return gulp.src('app/js/common.js') 
         .pipe(uglify()) 
         .pipe(rename({suffix: '.min'})) 
+        .pipe(gulp.dest('dist/js'));
+});
+
+//Сжатие библиотек
+gulp.task('libminify', function() {
+    return gulp.src([
+        'app/libs/jquery-2.2.1.min.js',
+        'app/libs/slick.min.js'
+        ]) 
+        .pipe(concat('libs.min.js')) 
+        .pipe(uglify()) 
         .pipe(gulp.dest('dist/js'));
 });
 

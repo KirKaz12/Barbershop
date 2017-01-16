@@ -1,0 +1,146 @@
+.news {
+	background: @light-grey;
+	position: relative;
+	padding-top: 30px;
+	padding-bottom: 80px;
+	&__wrapper {
+		width: 87.5%;
+		margin: 0 auto;
+		position: relative;
+	}
+	&__header {
+		.header(30px, 30px, #000);
+		text-align: center;
+	}
+	&__show-btn {
+		.button(18px, 24px, #000);
+		width: 100%;
+		position: absolute;
+		bottom: -50px;
+		background: transparent;
+		cursor: pointer;
+		&:focus,
+		&:active {
+			outline: none;
+		}
+	}
+	&__item {
+		display: flex;
+		justify-content: space-around;
+		align-content: flex-start;
+		display: none;
+		padding-top: 30px;
+		padding-bottom: 20px;
+	}
+	&__item:nth-child(1),
+	&__item:nth-child(2) {
+		display: flex;
+	}
+	&__item:nth-child(n+2) {
+		border-top: 1px solid #e5ddd5;
+	}
+	&__date {
+		position: relative;
+		display: block;
+		width: 50px;
+		height: 60px;
+		background: #000;
+		text-align: center;
+		.text(16px, 16px, #fff);
+		text-transform: uppercase;
+		&::before,
+		&::after {
+			position: absolute;
+			bottom: -5px;
+			content: '';
+			display: block;
+			width: 50%;
+			height: 10px;
+			background: @light-grey;
+		}
+		&::before {
+			left: 0;
+			transform: skewY(20deg);
+		}
+		&::after {
+			right: 0;
+			transform: skewY(-20deg);
+		}
+	}
+	&__num {
+		.header(30px, 30px, #fff);
+	}
+	&__txt {
+		width: 65.625%;
+		text-align: left;
+		.text(18px, 27px, #000);
+		margin: 0;
+	    margin-top: -10px;
+	}
+}
+
+@media @tablet-styles {
+	.news {
+		padding-bottom: 40px;
+		border-bottom: 1px solid #e5ddd5;
+		&__wrapper {
+			width: 83.333%;
+		}
+		&__header-wrapper {
+			display: flex;
+			align-content: center;
+			justify-content: space-between;
+			flex-wrap: wrap;
+		}
+		&__header {
+			width: 50%;
+			margin: 0;
+			align-self: center;
+			text-align: left;
+			font-size: 40px;
+			line-height: 40px;
+		}
+		&__show-btn {
+			width: 160px;
+			position: static;
+			margin-left: auto;
+		}
+		&__list {
+			display: flex;
+			flex-wrap: wrap;
+		}
+		&__item {
+			width: 50%;
+		}
+		&__item:nth-child(n+2) {
+			border: none;
+		}
+		&__date {
+			margin-right: auto;
+		}
+		&__txt {
+		    padding-right: 10%;
+		    width: 78.625%;
+		}
+	}
+}
+
+@media @desktop-styles {
+	.news {
+		&__item {
+			display: flex;
+			width: 33.333%;
+		}
+		&__item:nth-child(n+4) {
+			display: none;
+		}
+		&__item:nth-child(odd) {
+			.news__txt {
+				padding-right: 13.5%;
+			}
+		}
+		&__txt {
+			padding-right: 12.5%;
+		}
+	}
+}

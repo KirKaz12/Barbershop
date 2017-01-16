@@ -1,5 +1,30 @@
 .advantages {
 	padding-top: 40px;
+	padding-bottom: 90px;
+	margin-bottom: 30px;
+	position: relative;
+	&::after {
+		background: @light-grey;
+		content: '';
+		display: block;
+		position: absolute;
+		left: 0;
+		bottom: -145px;
+		height: 150px;
+		width: 50%;
+	    transform: skewY(10deg);
+	}
+	&::before {
+		background: @light-grey;
+		content: '';
+		display: block;
+		position: absolute;
+		right: 0;
+		bottom: -145px;
+		height: 150px;
+		width: 50%;
+	    transform: skewY(-10deg);
+	}
 	&__wrapper {
 		margin: 0 auto;
 	}
@@ -10,8 +35,12 @@
 		position: relative;
 		padding-bottom: 45px;
 	}
+	&__item {
+		outline: none !important;
+	}
 	&__figure {
 		text-align: center;
+		outline: none !important;
 	}
 	&__title {
 		.header(30px, 30px, #f7f4f1);
@@ -20,6 +49,7 @@
 	&__txt {
 		.text(20px, 27px, #f7f4f1);
 		text-align: center;
+		font-weight: 400;
 	}
 }
 
@@ -50,5 +80,93 @@
 }
 
 @media @tablet-styles {
+	.advantages {
+		&::before
+		{
+			transform: skewY(-5deg);
+		}
+		&::after {
+			transform: skewY(5deg);
+		}
+		&__wrapper {
+			width: 83.3333%;
+		}
+		&__item {
+			border-bottom: 1px solid #404040;
+			padding-top: 45px;
+			padding-bottom: 40px;
+		}
+		&__item:last-child {
+			border-bottom: none;
+		}
+		&__figure {
+			font-size: 0;
+			padding: 0;
+			margin: 0;
+		}
+		&__img {
+			display: inline-block;
+			vertical-align: top;
+			margin-right: 5%;
+		}
+		&__caption {
+			display: inline-block;
+			vertical-align: top;
+			width: 75%;
+		}
+		&__title {
+			font-size: 30px;
+			text-align: left;
+			margin: 0;
+			margin-bottom: 10px;
+		}
+		&__txt {
+			font-size: 20px;
+			text-align: left;
+			padding-right: 6.25%;
+			margin: 0;
+		} 
+	}
+}
 
+@media @desktop-styles {
+	.advantages {
+		&__list {
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+		}
+		&__item {
+			border-bottom: none;
+			border-right: 1px solid #404040;
+			width: 33.3333%;
+		}
+		&__item:last-child {
+			border-right: none;
+		}
+		&__img {
+			display: inline;
+			margin: 0;
+			margin-bottom: 30px;
+		}
+		&__caption {
+			display: block;
+			width: auto;
+		}
+		&__title {
+			text-align: center;
+			margin-bottom: 20px;
+		}
+		&__txt {
+			text-align: center;
+			padding-right: 14%;
+			padding-left: 14%;
+		}
+		&__item:nth-child(3n-1) {
+			.advantages__txt {
+				padding-right: 18.75%;
+				padding-left: 18.75%;
+			}
+		}
+	}
 }
