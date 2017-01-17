@@ -48,10 +48,16 @@
 		padding: 0 14px;
 		background: #826550;
 		box-shadow: 0 1px 0 #71543f, inset 0 1px 0 #71543f;
+		i {
+			color: #978374;
+		}
 		&:hover {
 			background: #755a46;
 			border-top-color: #755a46;
-		}
+			i {
+				color: #fff;
+			}
+		}	
 	}
 	&__toggle {
 		position: absolute;
@@ -218,8 +224,16 @@
 			padding-bottom: 24px;
 			background: transparent;
 			box-shadow: none;
+			font-size: 0;
 			&:hover {
 				background: transparent;
+				i {
+					color: #fff;
+				}
+			}
+			i {
+				color: #4d4d4d;
+				font-size: 20px;
 			}
 		}
 	}
@@ -236,6 +250,10 @@
 		}
 		&__user-controls {
 		    width: 15%;
+		}
+		&__user-login {
+			font-size: 18px;
+			text-transform: uppercase;
 		}
 	}
 }

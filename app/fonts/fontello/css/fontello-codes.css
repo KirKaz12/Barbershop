@@ -1,8 +1,12 @@
 
 .icon-facebook:before { content: '\e800'; } /* '' */
-.icon-login:before { content: '\e801'; } /* '' */
+.icon-ok:before { content: '\e801'; } /* '' */
 .icon-user:before { content: '\e802'; } /* '' */
 .icon-locked:before { content: '\e803'; } /* '' */
-.icon-checkmark:before { content: '\e804'; } /* '' */
+.icon-login:before { content: '\e804'; } /* '' */
+.icon-logout:before { content: '\e805'; } /* '' */
+.icon-left-dir:before { content: '\e806'; } /* '' */
+.icon-right-dir:before { content: '\e807'; } /* '' */
+.icon-spin6:before { content: '\e839'; } /* '' */
 .icon-vkontakte:before { content: '\f189'; } /* '' */
 .icon-instagram:before { content: '\f31e'; } /* '' */

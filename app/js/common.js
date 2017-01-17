@@ -12,6 +12,9 @@ var closeBtn = document.querySelector(".top-nav__toggle"),
 		infinite: true,
 		slidesToShow: 1,
 	    slidesToScroll: 1,
+	    prevArrow: "<button type=\"button\" class=\"slick-prev\"></button>",
+	    nextArrow: "<button type=\"button\" class=\"slick-next\"></button>",
+
 	    responsive: [
 	    	{
 	    		breakpoint: 768,
