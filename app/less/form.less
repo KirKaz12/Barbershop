@@ -1,0 +1,182 @@
+.login-form__total-wrapper {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 10;
+}
+.login-form {
+	position: relative;
+	z-index: 11;
+	background: @light-grey;
+	padding-top: 30px;
+	padding-bottom: 35px;
+	top: 135px;
+	box-shadow: 0 30px 50px rgba(0, 1, 1, 0.75);
+	&__wrapper {
+		width: 87.5%;
+		margin: 0 auto; 
+	}
+	&__header {
+		.header(30px, 30px, #000);
+		text-align: center;
+		margin: 0;
+		margin-bottom: 20px;
+	}
+	&__tip {
+		.text(18px, 27px, #000);
+		text-align: center;
+		margin: 0;
+		margin-bottom: 25px;
+	}
+	&__input {
+		width: 100%;
+		min-height: 50px;
+		border: 1px solid #e5ddd5;
+		margin-bottom: 5px;
+		padding: 15px;
+		display: block;
+		position: relative;
+	}
+	&__input::placeholder {
+		.text(18px, 30px, #000);
+	}
+	&__login::after {
+		content: '\e802';
+		position: absolute;
+		font-family: "fontello";
+		font-size: 32px;
+		display: inline-block;
+	}
+	&__check-wrapper {
+		margin-top: 25px;
+		margin-bottom: 30px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+	&__check {
+		display: none;
+	}
+	&__check:checked + label::before{
+		content: '\e801';
+	}
+	&__label {
+		.text(18px, 30px, #000);
+		padding-left: 48px;
+		position: relative;
+		cursor: pointer;
+		display: block;
+		width: 57.14%;
+		&::before {
+			content: '';
+			font-family: "fontello";
+			font-size: 32px;
+			position: absolute;
+			display: inline-block;
+			width: 32px;
+			height: 32px;
+			border: 1px solid #e5ddd5;
+			background: #fff;
+			left: 0;
+			color: #826550;
+		}
+	}
+	&__forget-link {
+		text-decoration: underline;
+		.text(18px, 30px, #000);
+		display: block;
+		width: 39.28%;
+		text-align: right;
+	}
+	&__buttons-wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+	&__submit-btn {
+		.button(18px, 24px, #fff);
+		width: 46.4%;
+		min-height: 50px;
+		background: #826550;
+	}
+	&__submit-span {
+		display: none;
+	}
+	&__close-btn {
+		.button(18px, 24px, #000);
+		width: 46.4%;
+		min-height: 50px;
+		background: transparent;
+	}
+}
+
+@media @tablet-styles {
+	.login-form {
+		padding-top: 50px;
+		padding-bottom: 55px;
+		width: 60%;
+		position: absolute;
+		left: 50%;
+		margin-left: -30%;
+		&__wrapper {
+			width: 69.5%;
+		}
+		&__header {
+			font-size: 40px;
+		}
+		&__input {
+			min-height: 70px;
+		}
+		&__input::placeholder {
+			font-size: 24px;
+		}
+		&__submit-btn {
+			width: 100%;
+		}
+		&__submit-span {
+			display: inline;
+		}
+		&__close-btn {
+			font-size: 0;
+			min-height: 0;
+			width: 26px;
+			height: 26px;
+			padding: 25px;
+			border: none;
+			position: absolute;
+			top: 45px;
+			right: -110px;
+			&::before,
+			&::after {
+				content: "";
+				display: block;
+				width: 35px;
+				height: 2px;
+				position: absolute;
+				background: #fff;
+				transform: rotate(45deg);
+				z-index: 1;
+				transition: all .75s;
+			}
+			&::before {
+				top: 25px;
+				left: 20px;
+				transform: rotate(-45deg);
+			}
+			&::after {
+				bottom: 23px;
+				left: 20px;
+			}
+		}
+	}
+}
+
+@media @desktop-styles {
+	.login-form {
+		width: 38.333%;
+		left: 50%;
+		margin-left: -19.17%;
+	}
+}

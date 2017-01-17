@@ -1,6 +1,9 @@
 header.page-header.container-fluid
 		.page-header__logo
-			img(src="img/logo-mob.png" width="226" height="30" alt="Барбершоп 'Бородинский'")
+			picture
+				source(srcset="img/desktop-logo.png" media="(min-width: 1200px)")
+				source(srcset="img/tablet-logo.png" media="(min-width: 768px)")
+				img(src="img/logo-mob.png" width="226" height="30" alt="Барбершоп 'Бородинский'")
 		nav.top-nav.top-nav_no-js
 			button.top-nav__toggle(type="button")
 			.top-nav__inner
