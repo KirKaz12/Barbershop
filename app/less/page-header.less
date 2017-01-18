@@ -16,6 +16,16 @@
 	min-height: 50px;
 	position: relative;
 	z-index: 1;
+	transition: all 1s;
+	transition: position 1s;
+	&_fixed {
+		position: fixed;
+		opacity: .7;
+		width: 100%;
+	    z-index: 10;
+	    padding-bottom: 25px;
+	    transition: all 1s;
+	}
 	&__inner {
 	    background: #6a4d38;
 	    flex-grow: 1;
@@ -220,6 +230,7 @@
 		}
 		&__user-item {
 			display: block;
+			padding-top: 5px;
 		}
 		&__user-login {
 			display: inline;

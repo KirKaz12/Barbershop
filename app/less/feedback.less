@@ -39,6 +39,18 @@
 	&__btn {
 		.button(18px, 24px, #000);
 		display: none;
+		&:hover {
+			border-width: 2px;
+		}
+		&:focus {
+			outline: none;
+		}
+		&:active {
+			outline: none;
+			background: #d5c9bd;
+			color: #a99f95;
+			border: none;
+		}
 	}
 	&__list {
 		position: relative;
@@ -137,6 +149,18 @@
 			top: 50%;
 			border: 1px solid #e5ddd5;
 			border-collapse: collapse;
+			&:hover {
+			border-width: 2px;
+			}
+			&:active {
+				outline: none;
+				background: #d5c9bd;
+				border: none;
+				&::before,
+				&::after {
+					color: #a99f95;
+				}
+			}
 		}
 		button.slick-prev{
 			left: 0;

@@ -19,9 +19,17 @@
 		bottom: -50px;
 		background: transparent;
 		cursor: pointer;
-		&:focus,
+		&:hover {
+			border-width: 2px;
+		}
+		&:focus {
+			outline: none;
+		}
 		&:active {
 			outline: none;
+			background: #d5c9bd;
+			color: #a99f95;
+			border: none;
 		}
 	}
 	&__item {

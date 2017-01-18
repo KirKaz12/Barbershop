@@ -35,7 +35,8 @@ var gulp         = require('gulp'),
 //=========== Tasks
 // Jade
 gulp.task('jade', function() {
-    return gulp.src('app/jade/index.jade')
+    return gulp.src(['app/jade/index.jade',
+                    'app/jade/works.jade'])
         .pipe(jade({pretty: true})) 
         .pipe(gulp.dest('app')) 
 });
