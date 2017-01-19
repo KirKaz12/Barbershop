@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/main.min.css"/>
   <title>Document</title>
 </head>
-<body>
+<body class="works">
   <header class="page-header container-fluid">
     <div class="page-header__logo">
       <picture>
@@ -18,10 +18,10 @@
       <button type="button" class="top-nav__toggle"></button>
       <div class="top-nav__inner">
         <ul class="top-nav__list">
-          <li class="top-nav__item top-nav__item_active"> <a href="#" class="top-nav__link">Главная</a></li>
-          <li class="top-nav__item"> <a href="#" class="top-nav__link">Наши работы</a></li>
-          <li class="top-nav__item"> <a href="#" class="top-nav__link">Записаться</a></li>
-          <li class="top-nav__item"> <a href="#" class="top-nav__link">Контакты</a></li>
+          <li class="top-nav__item"> <a href="index.html" class="top-nav__link">Главная</a></li>
+          <li class="top-nav__item top-nav__item_active"> <a href="works.html" class="top-nav__link top-nav__link_active">Наши работы</a></li>
+          <li class="top-nav__item"> <a href="#page-footer" class="top-nav__link">Записаться</a></li>
+          <li class="top-nav__item"> <a href="#page-footer" class="top-nav__link">Контакты</a></li>
         </ul>
         <ul class="top-nav__user-controls">
           <li class="top-nav__user-item"><a href="#" class="top-nav__user-login"><i class="icon-login"></i> Войти</a></li>
@@ -49,8 +49,70 @@
       </div>
     </div>
   </div>
-  <main class="main"></main>
-  <footer class="footer">
+  <main class="main">
+    <section class="our-works">
+      <div class="our-works__wrapper">
+        <div class="our-works__header-wrapper">
+          <h2 class="our-works__header">Наши работы</h2><a href="index.html" class="our-works__index-link">На главную</a>
+        </div>
+        <ul class="our-works__list">
+          <li class="our-works__item our-works__main-item">
+            <figure class="our-works__figure our-works__main-figure"><span class="our-works__main-work">Работа месяца</span>
+              <picture>
+                <source srcset="img/petr-mobile.jpg" media="(max-width: 767px)"/>
+                <source srcset="img/petr-tablet.jpg" media="(min-width: 768px)"/>
+                <source srcset="img/petr-desktop.jpg" media="(min-width: 1200px)"/><img src="img/petr-mobile.jpg" alt="Лжепётр Мчиславский"/>
+              </picture>
+              <figcaption class="our-works__caption our-works__main-caption">
+                <h3 class="our-works__caption-title">Лжепётр Мчиславский</h3>
+                <p class="our-works__caption-desc">Где я только ни стригся, но так как делаете это вы — не умеет никто другой! Еще раз спасибо и до скорого!</p><span class="our-works__caption-feature our-works__feature-haircut">Стрижка</span><span class="our-works__caption-feature our-works__feature-shave">Бритье</span><span class="our-works__caption-feature our-works__feature-mustoche">Усы</span>
+              </figcaption>
+            </figure>
+          </li>
+          <li class="our-works__item">
+            <figure class="our-works__figure">
+              <picture>
+                <source srcset="img/sasha-mobile.jpg" media="(max-width: 767px)"/>
+                <source srcset="img/sasha-tablet.jpg" media="(min-width: 768px)"/>
+                <source srcset="img/sasha-desktop.jpg" media="(min-width: 1200px)"/><img src="img/sasha-desktop.jpg" alt="Саша Мальцев"/>
+              </picture>
+              <figcaption class="our-works__caption">
+                <h3 class="our-works__caption-title">Саша Мальцев</h3>
+                <p class="our-works__caption-desc">Попросил омолодить и омолодили! Кто теперь скажет, что мне 45? </p><span class="our-works__caption-feature our-works__feature-haircut">Стрижка</span>
+              </figcaption>
+            </figure>
+          </li>
+          <li class="our-works__item">
+            <figure class="our-works__figure">
+              <picture>
+                <source srcset="img/vladimir-mobile.jpg" media="(max-width: 767px)"/>
+                <source srcset="img/vladimir-tablet.jpg" media="(min-width: 768px)"/>
+                <source srcset="img/vladimir-desktop.jpg" media="(min-width: 1200px)"/><img src="img/vladimir-desktop.jpg" alt="Владимир Иваныч"/>
+              </picture>
+              <figcaption class="our-works__caption">
+                <h3 class="our-works__caption-title">Владимир Иваныч</h3>
+                <p class="our-works__caption-desc">К зимнему сезону — готов!</p><span class="our-works__caption-feature our-works__feature-beard">Борода</span><span class="our-works__caption-feature our-works__feature-mustoche">Усы</span>
+              </figcaption>
+            </figure>
+          </li>
+          <li class="our-works__item">
+            <figure class="our-works__figure">
+              <picture>
+                <source srcset="img/vin-mobile.jpg" media="(max-width: 767px)"/>
+                <source srcset="img/vin-tablet.jpg" media="(min-width: 768px)"/>
+                <source srcset="img/vin-desktop.jpg" media="(min-width: 1200px)"/><img src="img/vin-desktop.jpg" alt="Винстон Синий"/>
+              </picture>
+              <figcaption class="our-works__caption">
+                <h3 class="our-works__caption-title">Винстон Синий</h3>
+                <p class="our-works__caption-desc">Как только заростаю и волосы начинают мешать видеть — бегом в Бородинский!</p><span class="our-works__caption-feature our-works__feature-haircut">Стрижка</span>
+              </figcaption>
+            </figure>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+  <footer id="page-footer" class="footer">
     <div class="footer__wrapper">
       <div class="footer__header-wrapper">
         <h3 class="footer__header">Барбершоп Бородинский</h3>
@@ -62,7 +124,6 @@
       <div class="footer__developer-wrapper"><span class="footer__developer-header">Разработано:</span><a href="https://github.com/KirKaz12" target="_blank" class="footer__developer-link">Kirill Stepanov</a></div>
     </div>
   </footer>
-  <script src="libs/jquery-2.2.1.min.js"></script>
-  <script src="libs/slick.min.js"></script>
-  <script src="js/common.js"></script>
+  <script src="js/libs.min.js"></script>
+  <script src="js/common.min.js"></script>
 </body>

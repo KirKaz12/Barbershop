@@ -6,10 +6,11 @@ head
 	link(rel="stylesheet" href="css/style.css")
 	title Document
 body.works
-	include page-header
-	include form
+	include works/page-header
+	include works/form
 	main.main
-	include page-footer
-	script(src="libs/jquery-2.2.1.min.js")
-	script(src="libs/slick.min.js")
+		include works/our-works
+	include works/page-footer
+	script(src="js/jquery-2.2.1.min.js")
+	script(src="js/slick.min.js")
 	script(src="js/common.js")

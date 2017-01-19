@@ -37,6 +37,10 @@ var gulp         = require('gulp'),
 gulp.task('jade', function() {
     return gulp.src(['app/jade/index.jade',
                     'app/jade/works.jade'])
+	    .pipe(plumber(function (error) {
+                gutil.log(error.message); //Продолжаем watch после ошибки
+                this.emit('end');
+        }))
         .pipe(jade({pretty: true})) 
         .pipe(gulp.dest('app')) 
 });

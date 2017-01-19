@@ -1,0 +1,15 @@
+.login-form__total-wrapper
+	.login-form
+		.login-form__wrapper
+			h3.login-form__header Личный кабинет
+			p.login-form__tip Введите свой логин и пароль, чтобы войти
+			form.login-form__form
+				input.login-form__input.login-form__login(type="text" placeholder="Логин")
+				input.login-form__input.login-form__pass(type="password" placeholder="Пароль")
+				.login-form__check-wrapper
+					input.login-form__check(type="checkbox" id="remember")
+					label.login-form__label(for="remember") Запомните меня
+					a.login-form__forget-link(href="#") Я забыл пароль
+				.login-form__buttons-wrapper
+					button.login-form__submit-btn Войти #[span.login-form__submit-span в личный кабинет]
+					button(type="button").login-form__close-btn Закрыть

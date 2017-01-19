@@ -164,6 +164,13 @@
 			height: 80vh;
 		}
 	}
+	&_fixed {
+		position: fixed;
+		opacity: .7;
+	    width: 100%;
+	    z-index: 10;
+	    padding-bottom: 0px;
+	}
 	}
 }
 @media @tablet-styles {
@@ -228,6 +235,9 @@
 				border-bottom: 3px solid #826550;
 			}
 		}
+		&__link_active {
+			border-bottom: 3px solid #826550 !important;
+		}
 		&__user-item {
 			display: block;
 			padding-top: 5px;
@@ -274,6 +284,36 @@
 		&__user-login {
 			font-size: 18px;
 			text-transform: uppercase;
+		}
+	}
+}
+
+// 	============  WORKS PAGE  =========
+@media @tablet-styles {
+	.works {
+		.page-header {
+			&__logo {
+				min-height: 300px;
+				position: relative;
+				&::before,
+				&::after {
+					position: absolute;
+					bottom: -70px;
+					content: '';
+					display: block;
+					width: 50%;
+					height: 100px;
+					background: @light-grey;
+				}
+				&::before {
+					left: 0;
+					transform: skewY(5deg);
+				}
+				&::after {
+					right: 0;
+					transform: skewY(-5deg);
+				}
+			}
 		}
 	}
 }

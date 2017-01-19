@@ -1,0 +1,21 @@
+header.page-header.container-fluid
+		.page-header__logo
+			picture
+				source(srcset="img/desktop-logo.png" media="(min-width: 1200px)")
+				source(srcset="img/tablet-logo.png" media="(min-width: 768px)")
+				img(src="img/logo-mob.png" width="226" height="30" alt="Барбершоп 'Бородинский'")
+		nav.top-nav.top-nav_no-js
+			button.top-nav__toggle(type="button")
+			.top-nav__inner
+				ul.top-nav__list
+					li.top-nav__item.top-nav__item_active 
+						a.top-nav__link.top-nav__link_active(href="index.html") Главная
+					li.top-nav__item 
+						a.top-nav__link(href="works.html") Наши работы
+					li.top-nav__item 
+						a.top-nav__link(href="#page-footer") Записаться
+					li.top-nav__item 
+						a.top-nav__link(href="#page-footer") Контакты
+				ul.top-nav__user-controls
+					li.top-nav__user-item
+						a.top-nav__user-login(href="#") #[i.icon-login] Войти

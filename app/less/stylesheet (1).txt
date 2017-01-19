@@ -1,0 +1,22 @@
+.stitches-sprite(@x: 0, @y: 0, @width: 0, @height: 0) {
+    background-position: @x @y;
+    width: @width;
+    height: @height;
+}
+
+.sprite {
+    background-image: url(spritesheet.png);    background-repeat: no-repeat;
+    display: block;
+
+    &.sprite-beard-icon {
+        .stitches-sprite(-10px, -10px, 23px, 21px);
+    }
+
+    &.sprite-mustache-icon {
+        .stitches-sprite(-10px, -51px, 45px, 12px);
+    }
+
+    &.sprite-scissors-icon {
+        .stitches-sprite(-53px, -10px, 21px, 20px);
+    }
+}

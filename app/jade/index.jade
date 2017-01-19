@@ -6,14 +6,14 @@ head
 	link(rel="stylesheet" href="css/style.css")
 	title Document
 body.index
-	include page-header
-	include form
+	include index/page-header
+	include index/form
 	main.main
-		include stats
-		include advantages
-		include news
-		include feedback
-	include page-footer
+		include index/stats
+		include index/advantages
+		include index/news
+		include index/feedback
+	include index/page-footer
 	script(src="libs/jquery-2.2.1.min.js")
 	script(src="libs/slick.min.js")
 	script(src="js/common.js")
