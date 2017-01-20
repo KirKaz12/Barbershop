@@ -66,7 +66,7 @@ $(document).ready(function(){
 	});
 
 	// Preventing submit form on click Enter button
-	$(".login-form__submit-btn").on("submit", function(e) {
+	$(".login-form__submit-btn").on("submit click", function(e) {
 		e.preventDefault();
 	});
 

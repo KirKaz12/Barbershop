@@ -153,6 +153,26 @@
 		&__wrapper {
 			width: 83.333%;
 		}
+		&__main-work {
+			&::before,
+			&::after {
+				content: '';
+				display: block;
+				position: absolute;
+				right: -5px;
+				height: 50%;
+				width: 10px;
+				background: #efefef;
+			}
+			&::before {
+				top: 0;
+				transform: skewX(-15deg);
+			}
+			&::after {
+				bottom: 0;
+				transform: skewX(15deg);
+			}
+		}
 		&__header-wrapper {
 			display: flex;
 			flex-wrap: wrap;
@@ -212,6 +232,26 @@
 		}
 		&__wrapper {
 			width: 80%;
+		}
+		&__main-work {
+			&::before,
+			&::after {
+				content: '';
+				display: block;
+				position: absolute;
+				left: -5px;
+				height: 50%;
+				width: 10px;
+				background: @light-grey;
+			}
+			&::before {
+				top: 0;
+				transform: skewX(15deg);
+			}
+			&::after {
+				bottom: 0;
+				transform: skewX(-15deg);
+			}
 		}
 		&__list {
 			display: flex;
