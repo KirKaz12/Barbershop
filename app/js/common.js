@@ -92,12 +92,13 @@ $(document).ready(function(){
 		this.classList.add("top-nav__link_active");
 		$(this).parent(".top-nav__item")[0].classList.add("top-nav__item_active");
 	});
-	
+	var aa = $(".top-nav__link_active")[0];
 	// Preventing click on active-state link
-	$(".top-nav__link_active").click(function(e) {
+	$(aa).on("click", function(e) {
+		console.log("clicked");
 		e.preventDefault();
 	});
-
+	console.log();
 	// Delete navigation modificators on tablet & desktop
 	$(window).resize(function() {
 		if(document.body.clientWidth >= 751) {
@@ -109,5 +110,13 @@ $(document).ready(function(){
 			nav.classList.add("top-nav_closed");
 		}
 	});
+	// Nice scroll
+	/*$(".top-nav").on("click", $( "a.top-nav__link[href^='#']" ), function (e) {
+		e.preventDefault();
+		var id  = $(this).attr('href');
+		console.log($( "a.top-nav__link[href^='#']" ));
+			//top = $(id).offset().top;
 
+		$(window).animate({scrollTop: top}, 1500);
+	});*/
 });

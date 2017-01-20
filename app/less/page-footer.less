@@ -1,7 +1,7 @@
 .footer {
 	position: relative;
 	background: @dark-grey;
-	z-index: 1;
+	z-index: 5;
 	padding-bottom: 25px;
 	&__wrapper {
 		margin: 0 auto;
@@ -131,6 +131,7 @@
 		&__header {
 			text-align: left;
 			padding: 0;
+			text-transform: uppercase;
 		}
 		&__adress {
 			text-align: left;
@@ -195,6 +196,22 @@
 		}
 		&__social-link:last-child {
 			margin-right: auto;
+		}
+	}
+}
+
+// ======= Works Page ==========
+
+.works {
+	.footer {
+		margin-top: 30px;
+	}
+}
+
+@media @tablet-styles {
+	.works {
+		.footer {
+			margin-top: 0;
 		}
 	}
 }
