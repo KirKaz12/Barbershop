@@ -9,9 +9,9 @@
 		display: block;
 		position: absolute;
 		left: 0;
-		bottom: -145px;
-		height: 150px;
-		width: 50%;
+		bottom: -110px;
+		height: 165px;
+		width: 51%;
 	    transform: skewY(10deg);
 	}
 	&::before {
@@ -20,9 +20,9 @@
 		display: block;
 		position: absolute;
 		right: 0;
-		bottom: -145px;
-		height: 150px;
-		width: 50%;
+		bottom: -110px;
+		height: 165px;
+		width: 51%;
 	    transform: skewY(-10deg);
 	}
 	&__wrapper {
@@ -90,6 +90,7 @@
 		}
 		&__wrapper {
 			width: 83.3333%;
+			max-width: 900px;
 		}
 		&__item {
 			border-bottom: 1px solid #404040;
@@ -131,6 +132,9 @@
 
 @media @desktop-styles {
 	.advantages {
+		&__wrapper {
+			max-width: 1200px;
+		}
 		&__list {
 			display: flex;
 			justify-content: space-around;

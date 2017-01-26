@@ -62,7 +62,7 @@
 			bottom: -5px;
 			content: '';
 			display: block;
-			width: 50%;
+			width: 52%;
 			height: 10px;
 			background: @light-grey;
 		}
@@ -93,6 +93,7 @@
 		border-bottom: 1px solid #e5ddd5;
 		&__wrapper {
 			width: 83.333%;
+			max-width: 900px;
 		}
 		&__header-wrapper {
 			display: flex;
@@ -135,6 +136,11 @@
 
 @media @desktop-styles {
 	.news {
+		padding-top: 50px;
+		padding-bottom: 50px;
+		&__wrapper {
+			max-width: 1200px;
+		}
 		&__item {
 			display: flex;
 			width: 33.333%;

@@ -46,7 +46,7 @@
 		}
 	}
 	&__input::placeholder {
-		.text(18px, 30px, #000);
+		.text(18px, 20px, #000);
 	}
 	&__login::after {
 		content: '\e802';
@@ -147,6 +147,7 @@
 		}
 		&__input::placeholder {
 			font-size: 24px;
+			line-height: 40px;
 		}
 		&__submit-btn {
 			width: 100%;
@@ -182,7 +183,7 @@
 				transform: rotate(-45deg);
 			}
 			&::after {
-				bottom: 23px;
+				bottom: 21px;
 				left: 20px;
 			}
 		}
@@ -194,5 +195,10 @@
 		width: 38.333%;
 		left: 50%;
 		margin-left: -19.17%;
+		&__close-btn {
+			&::after {
+				bottom: 23px;
+			}
+		}
 	}
 }

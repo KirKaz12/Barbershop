@@ -12,7 +12,7 @@
 		left: 0;
 		bottom: -100px;
 		height: 137px;
-		width: 50%;
+		width: 52%;
 	    transform: skewY(10deg);
 	}
 	&::before {
@@ -23,7 +23,7 @@
 		right: 0;
 		bottom: -100px;
 		height: 137px;
-		width: 50%;
+		width: 52%;
 	    transform: skewY(-10deg);
 	}
 	&__wrapper {
@@ -111,6 +111,7 @@
 		}
 		&__wrapper {
 			width: 83.333%;
+			max-width: 900px;
 		}
 		&__header-wrapper {
 			display: flex;
@@ -196,6 +197,9 @@
 @media @desktop-styles {
 	.feedback {
 		padding-bottom: 100px;
+		&__wrapper {
+			max-width: 1200px;
+		}
 		&__item {
 			padding-top: 0;
 			padding-bottom: 0;
