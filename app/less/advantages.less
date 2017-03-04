@@ -34,13 +34,19 @@
 		padding: 0;
 		position: relative;
 		padding-bottom: 45px;
+		perspective: 500px;
 	}
 	&__item {
-		outline: none !important;
+		outline: none !important;	
 	}
 	&__figure {
 		text-align: center;
 		outline: none !important;
+		transform-style: preserve-3d;
+		&_animated {
+			transform: rotateY(360deg);
+			transition: 2s;
+		}
 	}
 	&__title {
 		.header(30px, 30px, #f7f4f1);
@@ -50,6 +56,12 @@
 		.text(20px, 27px, #f7f4f1);
 		text-align: center;
 		font-weight: 400;
+	}
+	&__img {
+		&_animated {
+			transform: rotate(360deg);
+			transition: 2s;
+		}
 	}
 }
 

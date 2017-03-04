@@ -19,8 +19,10 @@
 		bottom: -50px;
 		background: transparent;
 		cursor: pointer;
+		transition: transform .5s;
 		&:hover {
 			border-width: 2px;
+			transform: scale(1.15, 1.15);
 		}
 		&:focus {
 			outline: none;
@@ -56,6 +58,7 @@
 		text-align: center;
 		.text(16px, 16px, #fff);
 		text-transform: uppercase;
+		transition: transform 2s;
 		&::before,
 		&::after {
 			position: absolute;
@@ -73,6 +76,10 @@
 		&::after {
 			right: 0;
 			transform: skewY(-20deg);
+		}
+		&_animated {
+			transform: rotateX(360deg);
+			tranform-style: preserve-3d;
 		}
 	}
 	&__num {

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <link rel="stylesheet" href="css/main.min.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
     <title>Барбершоп "Бородинский"</title>
   </head>
   <body class="index">
@@ -61,11 +61,11 @@
           <div class="stats__data-style-wrapper">
             <div class="stats__data-wrapper">
               <ul class="stats__data">
-                <li class="stats__item"><b class="stats__num">1 500 <sup>*</sup></b><span class="stats__item-txt">рублей <br/> вложений</span></li>
-                <li class="stats__item"><b class="stats__num">7 200</b><span class="stats__item-txt">секунд <br/> времени мастера</span></li>
-                <li class="stats__item"><b class="stats__num">90 000</b><span class="stats__item-txt">постриженных <br/> волос</span></li>
-                <li class="stats__item"><b class="stats__num">500 000 <sup>*</sup></b><span class="stats__item-txt">лайков и <br/>комплиментов</span></li>
-              </ul><span class="stats__fake-data-xs"><sup>*</sup> — приведённые данные ложь</span>
+                <li class="stats__item"><b class="stats__num"><span data-num="1500" class="stats__num-digit">1 500</span>  <sup class="asteriks">*</sup></b><span class="stats__item-txt">рублей <br/> вложений</span></li>
+                <li class="stats__item"><b class="stats__num"><span data-num="7200" class="stats__num-digit">7 200</span>  </b><span class="stats__item-txt">секунд <br/> времени мастера</span></li>
+                <li class="stats__item"><b class="stats__num"><span data-num="90000" class="stats__num-digit"> 90 000</span>  </b><span class="stats__item-txt">постриженных <br/> волос</span></li>
+                <li class="stats__item"><b class="stats__num"><span data-num="50000" class="stats__num-digit"> 500 000</span> <sup class="asteriks">*</sup></b><span class="stats__item-txt">лайков и <br/>комплиментов</span></li>
+              </ul><span class="stats__fake-data-xs"><sup class="asteriks">*</sup> — приведённые данные ложь</span>
             </div>
           </div>
         </div>
@@ -166,7 +166,8 @@
         <div class="footer__developer-wrapper"><span class="footer__developer-header">Разработано:</span><a href="https://github.com/KirKaz12" target="_blank" class="footer__developer-link">Kirill Stepanov</a></div>
       </div>
     </footer>
-    <script src="js/libs.min.js"></script>
-    <script src="js/common.min.js"></script>
+    <script src="libs/jquery-2.2.1.min.js"></script>
+    <script src="libs/slick.min.js"></script>
+    <script src="js/common.js"></script>
   </body>
 </html>
