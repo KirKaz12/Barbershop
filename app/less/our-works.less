@@ -34,9 +34,12 @@
 	}
 	&__index-link {
 		display: none;
+		transition: transform .5s;
 		&:hover {
 			border-width: 2px;
 			line-height: 48px;
+			position: relative;
+		    transform: scale(1.15, 1.15);
 		}
 		&:focus {
 			outline: none;
@@ -67,6 +70,15 @@
 	&__figure {
 		position: relative;
 		margin: 0;
+		overflow: hidden;
+		img {
+			transition: .25s;
+		}
+		&:hover {
+			img {
+				transform: scale(1.05, 1.05);
+			}
+		}
 	}
 	&__main-work {
 		display: block;

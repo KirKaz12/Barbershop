@@ -2573,6 +2573,8 @@ ul {
   -webkit-transform: scale(1.15, 1.15);
       -ms-transform: scale(1.15, 1.15);
           transform: scale(1.15, 1.15);
+  z-index: 2;
+  background: #292929;
 }
 .footer__social-link:active {
   background: #252525;
@@ -2837,10 +2839,18 @@ ul {
 }
 .our-works__index-link {
   display: none;
+  -webkit-transition: -webkit-transform .5s;
+  transition: -webkit-transform .5s;
+  transition: transform .5s;
+  transition: transform .5s, -webkit-transform .5s;
 }
 .our-works__index-link:hover {
   border-width: 2px;
   line-height: 48px;
+  position: relative;
+  -webkit-transform: scale(1.15, 1.15);
+      -ms-transform: scale(1.15, 1.15);
+          transform: scale(1.15, 1.15);
 }
 .our-works__index-link:focus {
   outline: none;
@@ -2875,6 +2885,16 @@ ul {
 .our-works__figure {
   position: relative;
   margin: 0;
+  overflow: hidden;
+}
+.our-works__figure img {
+  -webkit-transition: .25s;
+  transition: .25s;
+}
+.our-works__figure:hover img {
+  -webkit-transform: scale(1.05, 1.05);
+      -ms-transform: scale(1.05, 1.05);
+          transform: scale(1.05, 1.05);
 }
 .our-works__main-work {
   display: block;
@@ -3351,6 +3371,13 @@ ul {
 .prices__clock-img {
   width: 52px;
   height: 52px;
+}
+.prices__clock-img_animated {
+  -webkit-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+          transform: rotate(360deg);
+  -webkit-transition: 2s ease-in-out;
+  transition: 2s ease-in-out;
 }
 .prices__off-conditions {
   font-family: 'PT Sans Narrow', sans-serif;

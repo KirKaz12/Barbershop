@@ -76,8 +76,8 @@ $(document).ready(function(){
 
 	// Making navigation fixed on scroll
 	$(window).on("scroll", function() {
-		//console.log($(this).scrollTop())
-
+		var that = $(this),
+			clockImg = $(".prices__clock-img");
 		if( $(window).scrollTop() > 10 ) {
 			numStats.each(function () {
 				numStats.addClass("stats__num-digit-visible");
@@ -99,11 +99,15 @@ $(document).ready(function(){
 			nav.classList.remove("top-nav_fixed");
 		}
 
-		if( advList.offset() && $(this).scrollTop() > advList.offset().top/3) {
-			advFigure.each(function(){
+		if(clockImg.offset() && ($(this).scrollTop() > clockImg.offset().top/2))
+			clockImg.addClass("prices__clock-img_animated");
+
+		advFigure.each(function(){
+			if(that.scrollTop() > $(this).offset().top/2) 
+			{
 				$(this).addClass("advantages__figure_animated")
-			});
-		}
+			}
+		});
 
 		if( newsList.offset() && $(this).scrollTop() > newsList.offset().top/1.5) {
 			newsDate.each(function(){
@@ -142,28 +146,4 @@ $(document).ready(function(){
 			nav.classList.add("top-nav_closed");
 		}
 	});
-
-	//Counter
-	//var counter = 
-/*	numStats.each(function () {
-    $(this).prop('Counter', 100).animate({
-        Counter: $(this).data("num")
-    }, {
-        duration: 3000,
-        easing: 'swing',
-        step: function (now) {
-            $(this).text(Math.ceil(now));
-        }
-    });
-	});*/
-
-	// Nice scroll
-	/*$(".top-nav").on("click", $( "a.top-nav__link[href^='#']" ), function (e) {
-		e.preventDefault();
-		var id  = $(this).attr('href');
-		console.log($( "a.top-nav__link[href^='#']" ));
-			//top = $(id).offset().top;
-
-		$(window).animate({scrollTop: top}, 1500);
-	});*/
 });
