@@ -38,15 +38,26 @@
 }
 .stats__num-digit {
 	opacity: 0;
-
+}
+sup.asteriks {
+	opacity: 0;
+}
+sup.asteriks_visible {
+	opacity: 1;
+	transition: opacity 1s ease-in-out;
 }
 .stats__num-digit-visible {
 	opacity: 1;
-	transition: opacity 3s;
+	transition: opacity 3s ease-in-out;
 }
 .stats__item-txt {
 	.text(18px, 18px, #f7f4f1);
 	text-align: right;
+	opacity: 0;
+}
+.stats__item-txt_visible {
+	opacity: 1;
+	transition: opacity 1s ease-in-out;
 }
 .stats__fake-data-xs {
 	.text(18px, 18px, rgba(255,255,255,.3));

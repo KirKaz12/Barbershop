@@ -101,6 +101,8 @@
 	.slick-dots li.slick-active button:before {
 	    background: #353535;
 	    opacity: 1;
+	    transition: transform 1s;
+	    transform: rotate(405deg);
 	}
 }
 
@@ -136,6 +138,8 @@
 			outline: none !important;
 			padding: 35px 55px 35px 2%;
 			border: 1px solid #e5ddd5;
+			border-right: none;
+	    border-left: none;
 		}
 		&__figure {
 			justify-content: center;

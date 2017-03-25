@@ -232,12 +232,32 @@
 			padding-bottom: 24px;
 			background: transparent;
 			box-shadow: none;
+			position: relative;
+			&:after {
+					content: '';
+					bottom: 0;
+					background: #826550;
+					position: absolute;
+					left: 0;
+					height: 3px;
+					width: 0;
+					display: block;
+					transition: width .25s linear;
+				}
 			&:hover {
 				background: transparent;
-				border-bottom: 3px solid #826550;
+				//border-bottom: 3px solid #826550;
+				&:after {
+					width: 100%;
+				}
 			}
 		}
 		&__link_active {
+			&:hover {
+				&:after {
+					display: none;
+				}
+			}
 			border-bottom: 3px solid #826550 !important;
 		}
 		&__user-item {

@@ -78,19 +78,21 @@ $(document).ready(function(){
 	$(window).on("scroll", function() {
 		var that = $(this),
 			clockImg = $(".prices__clock-img");
-		if( $(window).scrollTop() > 10 ) {
+		if( $(window).scrollTop() > 50 ) {
 			numStats.each(function () {
 				numStats.addClass("stats__num-digit-visible");
 		    $(this).prop('Counter', 100).animate({
 		        Counter: $(this).data("num")
 		    }, {
-		        duration: 3000,
+		        duration: 2000,
 		        easing: 'swing',
 		        step: function (now) {
 		            $(this).text(Math.ceil(now));
 		        }
 		    });
 			});
+			$("sup.asteriks").addClass("asteriks_visible");
+			$(".stats__item-txt").addClass("stats__item-txt_visible");
 		}
 
 		if($(window).scrollTop() > 100) {
@@ -145,5 +147,28 @@ $(document).ready(function(){
 			$(".advantages__list").slick(slickProps);
 			nav.classList.add("top-nav_closed");
 		}
+	});
+	$(window).on("mousewheel scroll", function(e){
+		var wrapper = $(".login-form__total-wrapper");
+		if( wrapper[0].style.display ==="block" )
+			e.preventDefault();
+	});
+	
+	//Nice scroll
+	$(".top-nav").on("click", "a" , function (e) { 
+		
+		if(!e.target.matches("a[href^='#']")) return
+		//отменяем стандартную обработку нажатия по ссылке
+		e.preventDefault();
+
+		//забираем идентификатор бока с атрибута href
+		var id  = $(e.target).attr('href');
+
+		//узнаем высоту от начала страницы до блока на который ссылается якорь
+		if(id !== "#")
+			var top = $(id).offset().top;
+		
+		//анимируем переход на расстояние - top за 1500 мс
+		$('body,html').animate({scrollTop: top}, 1000);
 	});
 });
