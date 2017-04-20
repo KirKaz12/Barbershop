@@ -20,4 +20,4 @@
       * Inkscape
    6. Методолгия - БЭМ.
 
-   Ссылка на сайт: [Barbersop](http://barbershop.stepanov-itpark.ru/)
+   Ссылка на сайт: [Barbersop](https://kirkaz12.github.io/barbershop/)
